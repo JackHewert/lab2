@@ -1,11 +1,13 @@
 import { toDoItemTemplate } from '../templates/toDoItemTemplate'
 import { subscribe } from '../models/toDoListModel';
+import { deleteTodoController } from '../controllers/deleteToDoController';
+
 let view;
 
 
 export function toDoListView() {
     view = document.querySelector('#to-do-list')
-    //render()
+    view.addEventListener('click', onHandleClick)
 }
 subscribe(render)
 
@@ -13,11 +15,17 @@ function render(data) {
     const div = document.createElement('div')
     const toDoList = document.querySelector('#item-container')
     toDoList.replaceChildren()
-
     data.forEach((item) => {
-        div.prepend(toDoItemTemplate(it))
+        div.prepend(toDoItemTemplate(item))
 
     })
-
     toDoList.append(div)
+}
+
+function onHandleClick(e) {
+    switch (e.target.id) {
+        case 'delete':
+            deleteTodoController(e.target.dataset.uid)
+            break
+    }
 }

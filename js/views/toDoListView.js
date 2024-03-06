@@ -1,8 +1,8 @@
 import { toDoItemTemplate } from '../templates/toDoItemTemplate'
 import { subscribe } from '../models/toDoListModel';
-import { deleteTodoController } from '../controllers/deleteToDoController';
+import { deleteTodoController } from '../controllers/deleteToDoController'
 
-let view;
+let view
 
 
 export function toDoListView() {

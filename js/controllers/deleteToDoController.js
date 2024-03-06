@@ -1,4 +1,4 @@
-import { deleteToDo } from '../models/toDoListModel'
+import { deleteToDo } from "../models/toDoListModel"
 let dialog
 let deleteButton
 let exitButton
@@ -22,7 +22,7 @@ function onCloseDialog(e) {
 }
 
 function onRemoveToDo(e) {
-    deleteTodoController(uid)
+    deleteToDo(uid)
     onCloseDialog()
 }
 

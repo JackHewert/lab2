@@ -20,8 +20,8 @@ const getStore = () => {
 }
 
 const removeFromStore = (uid) => {
-    store = store.filter((item) => item.uid != uid)
+    store = store.filter((item) => item.uid !== uid)
     return store
 }
 
-export { getStore, createStore, removeFromStore}
+export { getStore, createStore, removeFromStore }

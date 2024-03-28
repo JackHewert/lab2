@@ -8,4 +8,4 @@ const firebaseConfig = {
 	appId: import.meta.env.VITE_APP_ID,
 }
 
-export {firebaseConfig}
+export { firebaseConfig };
